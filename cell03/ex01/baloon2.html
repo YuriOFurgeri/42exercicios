@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="baloon.css"/>
+
+</head>
+<body>
+    <div id="flutuar">
+    <div  onclick="encherBalao()" id="balao" class="balao"></div>
+</div>
+</body>
+<script>
+function encherBalao() 
+{   
+var colors = ["green", "blue", "yellow","red"];
+
+//var color = Math.floor(Math.random() * (colors.length));
+//document.getElementById("balao").style.background("green");
+
+/*
+let obalao = document.querySelectorAll(".balao");
+
+for (let i = 0; i < obalao.length; i++) {
+
+      
+obalao[i].style.backgroundColor = "blue";
+}
+*/
+//document.body.style.backgroundColor = colors[color];
+/*
+let obalao = document.getElementById("balao");
+
+let contador = 0;
+//obalao.onclick(contador++);
+
+color = colors[contador];
+
+if(contador == 0){
+obalao.style.background = color;
+obalao.style.height = "150px";
+contador++;
+}
+if(contador == 1){
+obalao.style.background = color;
+obalao.style.height = "150px";
+contador++;
+}
+if(contador == 2){
+obalao.style.background = color;
+obalao.style.height = "150px";
+contador++;
+}
+if(contador == 3){
+obalao.style.background = color;
+obalao.style.height = "150px";
+}
+*/
+/*
+let contador = 0;
+let obalao = document.getElementById("balao");
+
+obalao.addEventListener("click", function(){
+    obalao.style.height = "150px";
+    color = colors[contador];
+    obalao.style.background = color;
+    contador+=1;
+})
+*/
+}
+
+</script>
+</html>

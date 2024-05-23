@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="baloon.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="flutuar">
+        <div id="balao" class="balao"></div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            var contador = 0;
+            var colors = ["red", "green", "blue"];
+            var tamanho = 200;
+
+            $("#balao").on("click", function() {
+                tamanho += 10;
+                contador = (contador + 1) % colors.length;
+
+                if (tamanho > 420) {
+                    contador = 0;
+                    tamanho = 200;
+                }
+                encherBalao();
+            });
+
+            $("#balao").on("mouseleave", function() {
+                tamanho -= 5;
+                if (tamanho < 200) tamanho = 200;
+                contador = (contador - 1 + colors.length) % colors.length;
+
+                encherBalao();
+            });
+
+            function encherBalao() {
+                $("#balao").css({
+                    "width": tamanho + "px",
+                    "height": tamanho + "px",
+                    "background": colors[contador]
+                });
+            }
+        });
+    </script>
+</body>
+</html>

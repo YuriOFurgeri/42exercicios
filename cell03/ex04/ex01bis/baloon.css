@@ -1,0 +1,16 @@
+#balao{
+    width: 200px;
+    height: 200px;
+
+    border-radius: 100%;
+    background: red;
+}
+
+#flutuar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 40vh;
+    
+}

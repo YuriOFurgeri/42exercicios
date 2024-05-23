@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+</head>
+<body style="align-items: center; text-align: center; justify-content: center;">
+   
+    <table style="display: flex;align-items: center;justify-content: center; margin-top: 250px;">
+        
+        <th>ESQUERDO<input type="number" min="0" id="esquerdo"></th>
+        <th>
+        <select id="operacao">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+    </th>
+        <th><input type="number" min="0" id="direito">DIREITO</th>
+    </table>
+    
+<button type="submit" id="botaocalc" value="Try Me!">try me</button>
+ 
+</body>
+<script>
+
+document.getElementById('botaocalc').addEventListener('click', function() {
+const esquerdo = parseInt(document.getElementById('esquerdo').value);
+const operacao = document.getElementById('operacao').value;
+const direito = parseInt(document.getElementById('direito').value);
+
+
+
+
+if (isNaN(esquerdo) || isNaN(esquerdo) || esquerdo < 0 || direito < 0) {
+        alert('Error :(');
+        console.log('Error :(');
+        return;
+    }
+
+
+
+
+let resultado;
+
+switch (operacao){
+    case '+':
+        resultado =  esquerdo + direito;
+        break;
+    case '-':
+        resultado = esquerdo - direito;
+        break;
+    case '*':
+        resultado = esquerdo * direito;
+        break;
+       
+        case '/':
+            if (direito === 0) {
+                alert('It’s over 9000!');
+                console.log('It’s over 9000!');
+                return;
+            }
+            resultado = esquerdo / direito;
+            break;
+            case '%':
+            if (direito === 0) {
+                alert('It’s over 9000!');
+                console.log('It’s over 9000!');
+                return;
+            }
+            resultado = direito % esquerdo;
+            break;
+}
+alert(resultado);
+console.log(resultado);
+    });
+
+setInterval(() => {
+alert('please, use me...');
+}, 30000);
+</script>
+</html>

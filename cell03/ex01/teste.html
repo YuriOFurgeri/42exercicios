@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+const colors = ['#ee5253', '#00bce4', '#222f3e'];
+var i = 0;
+const button = document.getElementById('button');
+
+
+button.addEventListener('click', function() {
+  i = i < colors.length - 1 ? ++i : 0;
+  document.querySelector('body').style.background = colors[i]
+})
+    </script>
+</head>
+<body>
+    <button id="button">Button</button>
+
+</body>
+</html>
